@@ -2,7 +2,7 @@
 
 export default function ResultList({results}: {results: {name: string, count: number, distance: number}[]}) {
     return(
-        <div className="flex flex-col border-2 border-white rounded-md p-2 w-[500px] mt-10 mb-10 overflow-auto gap-2">
+        <div className="flex flex-col border-2 border-solid border-white rounded-md p-2 w-[500px] mt-10 mb-10 overflow-auto gap-2">
             <div className="flex justify-between">
                 <div>
                     <span className="mr-2">Platz</span>
