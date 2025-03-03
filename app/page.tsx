@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <div className="flex justify-center items-center overflow-y-auto scrollbar-none h-[100dvh]">
-      <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col items-center justify-around w-[400px] h-[300px] border-white border-2 rounded-2xl">
+      <form ref={formRef} onSubmit={handleSubmit} className="flex flex-col items-center justify-around w-[400px] h-[300px] border-white border-2 border-solid rounded-2xl">
         <div className="flex flex-col w-full items-center gap-2">
           <input type="text" name="vorname" id="vorname" placeholder="Vorname" className="input" required/>
           <input type="text" name="nachname" id="nachname" placeholder="Nachname" className="input" required/>
