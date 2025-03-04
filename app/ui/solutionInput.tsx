@@ -18,7 +18,7 @@ export default function SolutionInput({solution}: {solution: number}) {
     
 
     return(
-        <form ref={formRef} onSubmit={handleSubmit} className="flex items-center w-[500px] border-2 border-white h-16 rounded-sm p-2 gap-5 mt-5">
+        <form ref={formRef} onSubmit={handleSubmit} className="flex items-center w-[500px] border-2 border-white border-solid h-16 rounded-sm p-2 gap-5 mt-5">
             <input type="number" name="solution" id="solution" className="input grow" placeholder={String(solution)} required/>
             <button className="btn">Update</button>
         </form>
