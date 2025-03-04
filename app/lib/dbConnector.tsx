@@ -1,6 +1,7 @@
 'use server'
 
 import { sql } from '@vercel/postgres';
+import { unstable_noStore as noStore } from 'next/cache';
 
 export const addEntry = async (name: string, count: string) => {
     try {
@@ -20,10 +21,22 @@ type Entry = {
 }
 
 export const getTopCounts = async (): Promise<Entry[]> => {
-    const result = await sql`SELECT * FROM entries ORDER BY ABS(count - ${result_count}) LIMIT 10;`
+    noStore();
+    const solution = await getSolution();
+    const result = await sql`SELECT * FROM entries ORDER BY ABS(count - ${solution}) LIMIT 10;`
     return result.rows.map(row => ({
         name: row.name,
         count: Number(row.count),
         distance: Math.abs(result_count-Number(row.count)),
     }));
+}
+
+export const getSolution = async (): Promise<number> => {
+    noStore();
+    const result = await sql`SELECT value FROM global_vars WHERE name = 'solution';`;
+    return Number(result.rows[0].value);
+};
+
+export const setSolution = async (solution: number) => {
+    await sql`UPDATE global_vars SET value = ${solution} WHERE name = 'solution';`
 }

@@ -1,6 +1,7 @@
 'use server'
-import { getTopCounts } from "../lib/dbConnector"
-import ResultList from "../ui/resultList"
+import { getTopCounts, getSolution } from "@/app/lib/dbConnector"
+import ResultList from "@/app/ui/resultList"
+import SolutionInput from "@/app/ui/solutionInput"
 
 type Entry = {
     name: string,
@@ -10,10 +11,12 @@ type Entry = {
 
 export default async function Results() {
     const topCounts: Entry[] = await getTopCounts()
+    const solution: number = await getSolution()
     
     return (
-        <div className="flex justify-center h-[100dvh]">
-            <ResultList results={topCounts}/>
+        <div className="flex flex-col items-center h-[100dvh] justify-center">
+            <SolutionInput solution={solution}/>
+            <ResultList results={topCounts} solution={solution}/>
         </div>
     )
 }
