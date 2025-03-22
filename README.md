@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Count Guessr
 
-First, run the development server:
+Eine Next.js-WebApp für Schätzspiele, bei denen Nutzer die Anzahl eines bestimmten Objekts, z. B. Nudeln in einem Glas, schätzen können. Sie geben ihre Schätzung zusammen mit ihrem Namen ein, und am Ende wird ausgewertet, wer am nächsten an der tatsächlichen Anzahl liegt.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+
+## Features
+
+- Dark Mode
+- Einfache Eingabe der Schätzung
+- <domain>/results für eine Rangliste
+- Auf jedem Gerät benutzbar
+
+
+
+
+
+## Usage
+
+User eingabe (<domain>/)
+
+![Logo](https://github.com/simonrosebrock/count-guessr/blob/main/public/eingabe.png)
+
+Rangliste (<domain>/results)
+
+![Logo](https://github.com/simonrosebrock/count-guessr/blob/main/public/results.png)
+
+## Installation
+
+Repository Clonen
+```
+git clone https://github.com/simonrosebrock/count-guessr
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Git Folder löschen
+```
+//im Projektfolder folgenden Command ausführen
+rm -rf .git 
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Gehe auf Github und erstelle eine neue private Repository (nur Kleinbuchstaben benutzen)
 
-## Learn More
+Neue Repository initialisieren
+```
+git init
+git remote add origin https://github.com/<USERNAME>/<REPO-NAME>.git
+git add .
+git commit -m "Initial commit"
+git push -u origin main
+```
 
-To learn more about Next.js, take a look at the following resources:
+Vercel aufsetzen:
+- Jetzt gehe zu [Vercel](https://vercel.com/simon-rosebrocks-projects) und melde dich an
+- Erstell ein neues Projekt und wähle deine erstellte Github Repository aus.
+- Gehe unter dem Projekt auf storage und erstelle eine neue PostgreSQL Database.
+- kopiere .env.local aus dem dashboard
+- füge die Datei .env.local zum main Folder hinzu
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Locally benutzen
+```
+npm install //um dependencies herunterzuladen
+npm run dev //um die WebApp zu starten
+// gehe zu localhost:3000, um die Website zu benutzen
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Online benutzen
+```
+// gehe zu <projektname>.vercel.app
+```
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
