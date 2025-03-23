@@ -1,5 +1,7 @@
-require("dotenv").config({ path: ".env.local" });
-const { sql } = require("@vercel/postgres");
+import dotenv from 'dotenv';
+dotenv.config({ path: '.env.local' });
+
+import { sql } from "@vercel/postgres";
 
 async function setupDB() {
   try {
