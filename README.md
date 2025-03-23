@@ -57,6 +57,11 @@ Vercel aufsetzen:
 - kopiere .env.local aus dem dashboard
 - füge die Datei .env.local zum main Folder hinzu
 
+Datenbank vorbereiten
+```
+npm run setup-db
+```
+
 Locally benutzen
 ```
 npm install //um dependencies herunterzuladen

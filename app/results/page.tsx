@@ -12,6 +12,7 @@ type Entry = {
 export default async function Results() {
     const topCounts: Entry[] = await getTopCounts()
     const solution: number = await getSolution()
+    console.log(topCounts)
     
     return (
         <div className="flex flex-col items-center h-[100dvh] justify-center">

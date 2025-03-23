@@ -13,7 +13,6 @@ export const addEntry = async (name: string, count: string) => {
     
 }
 
-const result_count: number = 1000
 type Entry = {
     name: string,
     count: number,
@@ -27,7 +26,7 @@ export const getTopCounts = async (): Promise<Entry[]> => {
     return result.rows.map(row => ({
         name: row.name,
         count: Number(row.count),
-        distance: Math.abs(result_count-Number(row.count)),
+        distance: Math.abs(solution-Number(row.count)),
     }));
 }
 

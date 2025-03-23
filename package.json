@@ -6,11 +6,13 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "setup-db": "node app/lib/setup-db.js"
   },
   "dependencies": {
     "@vercel/analytics": "^1.5.0",
     "@vercel/postgres": "^0.10.0",
+    "dotenv": "^16.4.7",
     "next": "15.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
