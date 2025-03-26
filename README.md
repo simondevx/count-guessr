@@ -36,7 +36,7 @@ git clone https://github.com/simonrosebrock/count-guessr
 Git Folder löschen
 ```
 //im Projektfolder folgenden Command ausführen
-rm -rf .git 
+rmdir /s /q .git
 ```
 
 Gehe auf Github und erstelle eine neue private Repository (nur Kleinbuchstaben benutzen)
