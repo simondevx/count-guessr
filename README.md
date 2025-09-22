@@ -19,17 +19,17 @@ Eine Next.js-WebApp für Schätzspiele, bei denen Nutzer die Anzahl eines bestim
 
 User eingabe (<domain>/)
 
-![Logo](https://github.com/simonrosebrock/count-guessr/blob/main/public/eingabe.png)
+![Logo](https://github.com/simondevx/count-guessr/blob/main/public/eingabe.png)
 
 Rangliste (<domain>/results)
 
-![Logo](https://github.com/simonrosebrock/count-guessr/blob/main/public/results.png)
+![Logo](https://github.com/simondevx/count-guessr/blob/main/public/results.png)
 
 ## Installation
 
 Repository Clonen
 ```
-git clone https://github.com/simonrosebrock/count-guessr
+git clone https://github.com/simondevx/count-guessr
 ```
 
 
@@ -51,7 +51,7 @@ git push -u origin main
 ```
 
 Vercel aufsetzen:
-- Jetzt gehe zu [Vercel](https://vercel.com/simon-rosebrocks-projects) und melde dich an
+- Jetzt gehe zu [Vercel](https://vercel.com) und melde dich an
 - Erstell ein neues Projekt und wähle deine erstellte Github Repository aus.
 - Gehe unter dem Projekt auf storage und erstelle eine neue PostgreSQL Database.
 - kopiere .env.local aus dem dashboard
